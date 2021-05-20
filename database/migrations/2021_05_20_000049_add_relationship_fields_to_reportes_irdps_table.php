@@ -10,7 +10,7 @@ class AddRelationshipFieldsToReportesIrdpsTable extends Migration
     {
         Schema::table('reportes_irdps', function (Blueprint $table) {
             $table->unsignedBigInteger('usuario_id')->nullable();
-            $table->foreign('usuario_id', 'usuario_fk_3772160')->references('id')->on('users');
+            $table->foreign('usuario_id', 'usuario_fk_3949510')->references('id')->on('users');
         });
     }
 }

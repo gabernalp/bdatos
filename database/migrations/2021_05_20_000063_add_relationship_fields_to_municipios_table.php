@@ -10,7 +10,7 @@ class AddRelationshipFieldsToMunicipiosTable extends Migration
     {
         Schema::table('municipios', function (Blueprint $table) {
             $table->unsignedBigInteger('departamento_id');
-            $table->foreign('departamento_id', 'departamento_fk_3515222')->references('id')->on('departamentos');
+            $table->foreign('departamento_id', 'departamento_fk_3949422')->references('id')->on('departamentos');
         });
     }
 }

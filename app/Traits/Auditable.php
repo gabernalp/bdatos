@@ -10,15 +10,17 @@ trait Auditable
     public static function bootAuditable()
     {
         static::created(function (Model $model) {
-            self::audit('created', $model);
+            self::audit('audit:created', $model);
         });
 
         static::updated(function (Model $model) {
-            self::audit('updated', $model);
+            $model->attributes = array_merge($model->getChanges(), ['id' => $model->id]);
+
+            self::audit('audit:updated', $model);
         });
 
         static::deleted(function (Model $model) {
-            self::audit('deleted', $model);
+            self::audit('audit:deleted', $model);
         });
     }
 
@@ -27,7 +29,7 @@ trait Auditable
         AuditLog::create([
             'description'  => $description,
             'subject_id'   => $model->id ?? null,
-            'subject_type' => get_class($model) ?? null,
+            'subject_type' => sprintf('%s#%s', get_class($model), $model->id) ?? null,
             'user_id'      => auth()->id() ?? null,
             'properties'   => $model ?? null,
             'host'         => request()->ip() ?? null,

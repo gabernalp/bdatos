@@ -77,17 +77,17 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Sed Participacion Artistas
     Route::apiResource('sed-participacion-artista', 'SedParticipacionArtistasApiController');
 
-    // Matricula Municipal
-    Route::apiResource('matricula-municipals', 'MatriculaMunicipalApiController');
-
     // Instituciones
     Route::apiResource('instituciones', 'InstitucionesApiController');
+
+    // Jornadas
+    Route::apiResource('jornadas', 'JornadasApiController');
 
     // Sede
     Route::apiResource('sedes', 'SedeApiController');
 
-    // Jornadas
-    Route::apiResource('jornadas', 'JornadasApiController');
+    // Matricula Municipal
+    Route::apiResource('matricula-municipals', 'MatriculaMunicipalApiController');
 
     // Sed Calificacion Docente
     Route::apiResource('sed-calificacion-docentes', 'SedCalificacionDocenteApiController');

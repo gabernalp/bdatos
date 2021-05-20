@@ -13,7 +13,9 @@
                 <label class="required" for="nombre">{{ trans('cruds.sedEstimulosGestore.fields.nombre') }}</label>
                 <input class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}" type="text" name="nombre" id="nombre" value="{{ old('nombre', '') }}" required>
                 @if($errors->has('nombre'))
-                    <span class="text-danger">{{ $errors->first('nombre') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedEstimulosGestore.fields.nombre_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label class="required" for="linea_participacion">{{ trans('cruds.sedEstimulosGestore.fields.linea_participacion') }}</label>
                 <input class="form-control {{ $errors->has('linea_participacion') ? 'is-invalid' : '' }}" type="text" name="linea_participacion" id="linea_participacion" value="{{ old('linea_participacion', '') }}" required>
                 @if($errors->has('linea_participacion'))
-                    <span class="text-danger">{{ $errors->first('linea_participacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('linea_participacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedEstimulosGestore.fields.linea_participacion_helper') }}</span>
             </div>
@@ -29,7 +33,9 @@
                 <label for="proyecto">{{ trans('cruds.sedEstimulosGestore.fields.proyecto') }}</label>
                 <input class="form-control {{ $errors->has('proyecto') ? 'is-invalid' : '' }}" type="text" name="proyecto" id="proyecto" value="{{ old('proyecto', '') }}">
                 @if($errors->has('proyecto'))
-                    <span class="text-danger">{{ $errors->first('proyecto') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('proyecto') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedEstimulosGestore.fields.proyecto_helper') }}</span>
             </div>
@@ -42,7 +48,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('estado'))
-                    <span class="text-danger">{{ $errors->first('estado') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('estado') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedEstimulosGestore.fields.estado_helper') }}</span>
             </div>
@@ -50,7 +58,9 @@
                 <label class="required" for="fecha_presentacion">{{ trans('cruds.sedEstimulosGestore.fields.fecha_presentacion') }}</label>
                 <input class="form-control date {{ $errors->has('fecha_presentacion') ? 'is-invalid' : '' }}" type="text" name="fecha_presentacion" id="fecha_presentacion" value="{{ old('fecha_presentacion') }}" required>
                 @if($errors->has('fecha_presentacion'))
-                    <span class="text-danger">{{ $errors->first('fecha_presentacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_presentacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedEstimulosGestore.fields.fecha_presentacion_helper') }}</span>
             </div>

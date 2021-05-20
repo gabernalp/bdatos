@@ -18,7 +18,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('sector'))
-                    <span class="text-danger">{{ $errors->first('sector') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('sector') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.institucione.fields.sector_helper') }}</span>
             </div>
@@ -26,7 +28,9 @@
                 <label class="required" for="nombre_institucion">{{ trans('cruds.institucione.fields.nombre_institucion') }}</label>
                 <input class="form-control {{ $errors->has('nombre_institucion') ? 'is-invalid' : '' }}" type="text" name="nombre_institucion" id="nombre_institucion" value="{{ old('nombre_institucion', '') }}" required>
                 @if($errors->has('nombre_institucion'))
-                    <span class="text-danger">{{ $errors->first('nombre_institucion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre_institucion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.institucione.fields.nombre_institucion_helper') }}</span>
             </div>
@@ -38,7 +42,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('comuna'))
-                    <span class="text-danger">{{ $errors->first('comuna') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('comuna') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.institucione.fields.comuna_helper') }}</span>
             </div>

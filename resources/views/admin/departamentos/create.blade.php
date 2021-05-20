@@ -13,7 +13,9 @@
                 <label for="name">{{ trans('cruds.departamento.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}">
                 @if($errors->has('name'))
-                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('name') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.departamento.fields.name_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label for="code">{{ trans('cruds.departamento.fields.code') }}</label>
                 <input class="form-control {{ $errors->has('code') ? 'is-invalid' : '' }}" type="text" name="code" id="code" value="{{ old('code', '') }}">
                 @if($errors->has('code'))
-                    <span class="text-danger">{{ $errors->first('code') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('code') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.departamento.fields.code_helper') }}</span>
             </div>

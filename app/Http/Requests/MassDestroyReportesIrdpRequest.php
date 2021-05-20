@@ -2,38 +2,25 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\ReportesIrdp;
 use Gate;
+use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
-class MassDestroyReportesIrdpRequest extends FormRequest  {
-
-
-
-
-
-public function authorize()
+class MassDestroyReportesIrdpRequest extends FormRequest
 {
-    abort_if(Gate::denies('reportes_irdp_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+    public function authorize()
+    {
+        abort_if(Gate::denies('reportes_irdp_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        return true;
+    }
 
-
-
-return true;
-    
-}
-public function rules()
-{
-    
-
-
-
-return [
-'ids' => 'required|array',
-    'ids.*' => 'exists:reportes_irdps,id',
-]
-    
-}
-
+    public function rules()
+    {
+        return [
+            'ids'   => 'required|array',
+            'ids.*' => 'exists:reportes_irdps,id',
+        ];
+    }
 }

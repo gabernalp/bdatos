@@ -84,375 +84,375 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 19,
-                'title' => 'departamento_create',
-            ],
-            [
-                'id'    => 20,
-                'title' => 'departamento_edit',
-            ],
-            [
-                'id'    => 21,
-                'title' => 'departamento_show',
-            ],
-            [
-                'id'    => 22,
-                'title' => 'departamento_delete',
-            ],
-            [
-                'id'    => 23,
-                'title' => 'departamento_access',
-            ],
-            [
-                'id'    => 24,
-                'title' => 'municipio_create',
-            ],
-            [
-                'id'    => 25,
-                'title' => 'municipio_edit',
-            ],
-            [
-                'id'    => 26,
-                'title' => 'municipio_show',
-            ],
-            [
-                'id'    => 27,
-                'title' => 'municipio_delete',
-            ],
-            [
-                'id'    => 28,
-                'title' => 'municipio_access',
-            ],
-            [
-                'id'    => 29,
-                'title' => 'secretaria_general_access',
-            ],
-            [
-                'id'    => 30,
-                'title' => 'secretaria_gobierno_access',
-            ],
-            [
-                'id'    => 31,
-                'title' => 'secretaria_salud_access',
-            ],
-            [
-                'id'    => 32,
-                'title' => 'secretaria_planeacion_access',
-            ],
-            [
-                'id'    => 33,
-                'title' => 'secretaria_hacienda_access',
-            ],
-            [
-                'id'    => 34,
-                'title' => 'secretaria_desarrollo_access',
-            ],
-            [
-                'id'    => 35,
-                'title' => 'secretaria_educacion_access',
-            ],
-            [
-                'id'    => 36,
-                'title' => 'secretaria_infraestructura_access',
-            ],
-            [
-                'id'    => 37,
-                'title' => 'secretaria_movilidad_access',
-            ],
-            [
-                'id'    => 38,
-                'title' => 'instituto_recreacion_access',
-            ],
-            [
-                'id'    => 39,
-                'title' => 'ese_municipal_access',
-            ],
-            [
-                'id'    => 40,
-                'title' => 'oficina_juridica_access',
-            ],
-            [
-                'id'    => 41,
-                'title' => 'variables_globale_access',
-            ],
-            [
-                'id'    => 42,
-                'title' => 'variables_municipio_access',
-            ],
-            [
-                'id'    => 43,
-                'title' => 'comuna_create',
-            ],
-            [
-                'id'    => 44,
-                'title' => 'comuna_edit',
-            ],
-            [
-                'id'    => 45,
-                'title' => 'comuna_show',
-            ],
-            [
-                'id'    => 46,
-                'title' => 'comuna_delete',
-            ],
-            [
-                'id'    => 47,
-                'title' => 'comuna_access',
-            ],
-            [
-                'id'    => 48,
-                'title' => 'reportes_sgen_create',
-            ],
-            [
-                'id'    => 49,
-                'title' => 'reportes_sgen_edit',
-            ],
-            [
-                'id'    => 50,
-                'title' => 'reportes_sgen_show',
-            ],
-            [
-                'id'    => 51,
-                'title' => 'reportes_sgen_delete',
-            ],
-            [
-                'id'    => 52,
-                'title' => 'reportes_sgen_access',
-            ],
-            [
-                'id'    => 53,
-                'title' => 'reportes_sgob_create',
-            ],
-            [
-                'id'    => 54,
-                'title' => 'reportes_sgob_edit',
-            ],
-            [
-                'id'    => 55,
-                'title' => 'reportes_sgob_show',
-            ],
-            [
-                'id'    => 56,
-                'title' => 'reportes_sgob_delete',
-            ],
-            [
-                'id'    => 57,
-                'title' => 'reportes_sgob_access',
-            ],
-            [
-                'id'    => 58,
-                'title' => 'reportes_ssal_create',
-            ],
-            [
-                'id'    => 59,
-                'title' => 'reportes_ssal_edit',
-            ],
-            [
-                'id'    => 60,
-                'title' => 'reportes_ssal_show',
-            ],
-            [
-                'id'    => 61,
-                'title' => 'reportes_ssal_delete',
-            ],
-            [
-                'id'    => 62,
-                'title' => 'reportes_ssal_access',
-            ],
-            [
-                'id'    => 63,
-                'title' => 'reportes_spln_create',
-            ],
-            [
-                'id'    => 64,
-                'title' => 'reportes_spln_edit',
-            ],
-            [
-                'id'    => 65,
-                'title' => 'reportes_spln_show',
-            ],
-            [
-                'id'    => 66,
-                'title' => 'reportes_spln_delete',
-            ],
-            [
-                'id'    => 67,
-                'title' => 'reportes_spln_access',
-            ],
-            [
-                'id'    => 68,
-                'title' => 'reportes_shac_create',
-            ],
-            [
-                'id'    => 69,
-                'title' => 'reportes_shac_edit',
-            ],
-            [
-                'id'    => 70,
-                'title' => 'reportes_shac_show',
-            ],
-            [
-                'id'    => 71,
-                'title' => 'reportes_shac_delete',
-            ],
-            [
-                'id'    => 72,
-                'title' => 'reportes_shac_access',
-            ],
-            [
-                'id'    => 73,
-                'title' => 'reportes_sde_create',
-            ],
-            [
-                'id'    => 74,
-                'title' => 'reportes_sde_edit',
-            ],
-            [
-                'id'    => 75,
-                'title' => 'reportes_sde_show',
-            ],
-            [
-                'id'    => 76,
-                'title' => 'reportes_sde_delete',
-            ],
-            [
-                'id'    => 77,
-                'title' => 'reportes_sde_access',
-            ],
-            [
-                'id'    => 78,
-                'title' => 'reportes_sedu_create',
-            ],
-            [
-                'id'    => 79,
-                'title' => 'reportes_sedu_edit',
-            ],
-            [
-                'id'    => 80,
-                'title' => 'reportes_sedu_show',
-            ],
-            [
-                'id'    => 81,
-                'title' => 'reportes_sedu_delete',
-            ],
-            [
-                'id'    => 82,
-                'title' => 'reportes_sedu_access',
-            ],
-            [
-                'id'    => 83,
-                'title' => 'reportes_sinf_create',
-            ],
-            [
-                'id'    => 84,
-                'title' => 'reportes_sinf_edit',
-            ],
-            [
-                'id'    => 85,
-                'title' => 'reportes_sinf_show',
-            ],
-            [
-                'id'    => 86,
-                'title' => 'reportes_sinf_delete',
-            ],
-            [
-                'id'    => 87,
-                'title' => 'reportes_sinf_access',
-            ],
-            [
-                'id'    => 88,
-                'title' => 'reportes_smov_create',
-            ],
-            [
-                'id'    => 89,
-                'title' => 'reportes_smov_edit',
-            ],
-            [
-                'id'    => 90,
-                'title' => 'reportes_smov_show',
-            ],
-            [
-                'id'    => 91,
-                'title' => 'reportes_smov_delete',
-            ],
-            [
-                'id'    => 92,
-                'title' => 'reportes_smov_access',
-            ],
-            [
-                'id'    => 93,
-                'title' => 'reportes_irdp_create',
-            ],
-            [
-                'id'    => 94,
-                'title' => 'reportes_irdp_edit',
-            ],
-            [
-                'id'    => 95,
-                'title' => 'reportes_irdp_show',
-            ],
-            [
-                'id'    => 96,
-                'title' => 'reportes_irdp_delete',
-            ],
-            [
-                'id'    => 97,
-                'title' => 'reportes_irdp_access',
-            ],
-            [
-                'id'    => 98,
-                'title' => 'reporte_esem_create',
-            ],
-            [
-                'id'    => 99,
-                'title' => 'reporte_esem_edit',
-            ],
-            [
-                'id'    => 100,
-                'title' => 'reporte_esem_show',
-            ],
-            [
-                'id'    => 101,
-                'title' => 'reporte_esem_delete',
-            ],
-            [
-                'id'    => 102,
-                'title' => 'reporte_esem_access',
-            ],
-            [
-                'id'    => 103,
-                'title' => 'reportes_oajm_create',
-            ],
-            [
-                'id'    => 104,
-                'title' => 'reportes_oajm_edit',
-            ],
-            [
-                'id'    => 105,
-                'title' => 'reportes_oajm_show',
-            ],
-            [
-                'id'    => 106,
-                'title' => 'reportes_oajm_delete',
-            ],
-            [
-                'id'    => 107,
-                'title' => 'reportes_oajm_access',
-            ],
-            [
-                'id'    => 108,
                 'title' => 'user_alert_create',
             ],
             [
-                'id'    => 109,
+                'id'    => 20,
                 'title' => 'user_alert_show',
             ],
             [
-                'id'    => 110,
+                'id'    => 21,
                 'title' => 'user_alert_delete',
             ],
             [
-                'id'    => 111,
+                'id'    => 22,
                 'title' => 'user_alert_access',
+            ],
+            [
+                'id'    => 23,
+                'title' => 'variables_globale_access',
+            ],
+            [
+                'id'    => 24,
+                'title' => 'departamento_create',
+            ],
+            [
+                'id'    => 25,
+                'title' => 'departamento_edit',
+            ],
+            [
+                'id'    => 26,
+                'title' => 'departamento_show',
+            ],
+            [
+                'id'    => 27,
+                'title' => 'departamento_delete',
+            ],
+            [
+                'id'    => 28,
+                'title' => 'departamento_access',
+            ],
+            [
+                'id'    => 29,
+                'title' => 'municipio_create',
+            ],
+            [
+                'id'    => 30,
+                'title' => 'municipio_edit',
+            ],
+            [
+                'id'    => 31,
+                'title' => 'municipio_show',
+            ],
+            [
+                'id'    => 32,
+                'title' => 'municipio_delete',
+            ],
+            [
+                'id'    => 33,
+                'title' => 'municipio_access',
+            ],
+            [
+                'id'    => 34,
+                'title' => 'secretaria_general_access',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'secretaria_gobierno_access',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'secretaria_salud_access',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'secretaria_planeacion_access',
+            ],
+            [
+                'id'    => 38,
+                'title' => 'secretaria_hacienda_access',
+            ],
+            [
+                'id'    => 39,
+                'title' => 'secretaria_desarrollo_access',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'secretaria_educacion_access',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'secretaria_infraestructura_access',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'secretaria_movilidad_access',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'instituto_recreacion_access',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'ese_municipal_access',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'oficina_juridica_access',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'variables_municipio_access',
+            ],
+            [
+                'id'    => 47,
+                'title' => 'comuna_create',
+            ],
+            [
+                'id'    => 48,
+                'title' => 'comuna_edit',
+            ],
+            [
+                'id'    => 49,
+                'title' => 'comuna_show',
+            ],
+            [
+                'id'    => 50,
+                'title' => 'comuna_delete',
+            ],
+            [
+                'id'    => 51,
+                'title' => 'comuna_access',
+            ],
+            [
+                'id'    => 52,
+                'title' => 'reportes_sgen_create',
+            ],
+            [
+                'id'    => 53,
+                'title' => 'reportes_sgen_edit',
+            ],
+            [
+                'id'    => 54,
+                'title' => 'reportes_sgen_show',
+            ],
+            [
+                'id'    => 55,
+                'title' => 'reportes_sgen_delete',
+            ],
+            [
+                'id'    => 56,
+                'title' => 'reportes_sgen_access',
+            ],
+            [
+                'id'    => 57,
+                'title' => 'reportes_sgob_create',
+            ],
+            [
+                'id'    => 58,
+                'title' => 'reportes_sgob_edit',
+            ],
+            [
+                'id'    => 59,
+                'title' => 'reportes_sgob_show',
+            ],
+            [
+                'id'    => 60,
+                'title' => 'reportes_sgob_delete',
+            ],
+            [
+                'id'    => 61,
+                'title' => 'reportes_sgob_access',
+            ],
+            [
+                'id'    => 62,
+                'title' => 'reportes_ssal_create',
+            ],
+            [
+                'id'    => 63,
+                'title' => 'reportes_ssal_edit',
+            ],
+            [
+                'id'    => 64,
+                'title' => 'reportes_ssal_show',
+            ],
+            [
+                'id'    => 65,
+                'title' => 'reportes_ssal_delete',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'reportes_ssal_access',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'reportes_spln_create',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'reportes_spln_edit',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'reportes_spln_show',
+            ],
+            [
+                'id'    => 70,
+                'title' => 'reportes_spln_delete',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'reportes_spln_access',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'reportes_shac_create',
+            ],
+            [
+                'id'    => 73,
+                'title' => 'reportes_shac_edit',
+            ],
+            [
+                'id'    => 74,
+                'title' => 'reportes_shac_show',
+            ],
+            [
+                'id'    => 75,
+                'title' => 'reportes_shac_delete',
+            ],
+            [
+                'id'    => 76,
+                'title' => 'reportes_shac_access',
+            ],
+            [
+                'id'    => 77,
+                'title' => 'reportes_sde_create',
+            ],
+            [
+                'id'    => 78,
+                'title' => 'reportes_sde_edit',
+            ],
+            [
+                'id'    => 79,
+                'title' => 'reportes_sde_show',
+            ],
+            [
+                'id'    => 80,
+                'title' => 'reportes_sde_delete',
+            ],
+            [
+                'id'    => 81,
+                'title' => 'reportes_sde_access',
+            ],
+            [
+                'id'    => 82,
+                'title' => 'reportes_sedu_create',
+            ],
+            [
+                'id'    => 83,
+                'title' => 'reportes_sedu_edit',
+            ],
+            [
+                'id'    => 84,
+                'title' => 'reportes_sedu_show',
+            ],
+            [
+                'id'    => 85,
+                'title' => 'reportes_sedu_delete',
+            ],
+            [
+                'id'    => 86,
+                'title' => 'reportes_sedu_access',
+            ],
+            [
+                'id'    => 87,
+                'title' => 'reportes_sinf_create',
+            ],
+            [
+                'id'    => 88,
+                'title' => 'reportes_sinf_edit',
+            ],
+            [
+                'id'    => 89,
+                'title' => 'reportes_sinf_show',
+            ],
+            [
+                'id'    => 90,
+                'title' => 'reportes_sinf_delete',
+            ],
+            [
+                'id'    => 91,
+                'title' => 'reportes_sinf_access',
+            ],
+            [
+                'id'    => 92,
+                'title' => 'reportes_smov_create',
+            ],
+            [
+                'id'    => 93,
+                'title' => 'reportes_smov_edit',
+            ],
+            [
+                'id'    => 94,
+                'title' => 'reportes_smov_show',
+            ],
+            [
+                'id'    => 95,
+                'title' => 'reportes_smov_delete',
+            ],
+            [
+                'id'    => 96,
+                'title' => 'reportes_smov_access',
+            ],
+            [
+                'id'    => 97,
+                'title' => 'reportes_irdp_create',
+            ],
+            [
+                'id'    => 98,
+                'title' => 'reportes_irdp_edit',
+            ],
+            [
+                'id'    => 99,
+                'title' => 'reportes_irdp_show',
+            ],
+            [
+                'id'    => 100,
+                'title' => 'reportes_irdp_delete',
+            ],
+            [
+                'id'    => 101,
+                'title' => 'reportes_irdp_access',
+            ],
+            [
+                'id'    => 102,
+                'title' => 'reporte_esem_create',
+            ],
+            [
+                'id'    => 103,
+                'title' => 'reporte_esem_edit',
+            ],
+            [
+                'id'    => 104,
+                'title' => 'reporte_esem_show',
+            ],
+            [
+                'id'    => 105,
+                'title' => 'reporte_esem_delete',
+            ],
+            [
+                'id'    => 106,
+                'title' => 'reporte_esem_access',
+            ],
+            [
+                'id'    => 107,
+                'title' => 'reportes_oajm_create',
+            ],
+            [
+                'id'    => 108,
+                'title' => 'reportes_oajm_edit',
+            ],
+            [
+                'id'    => 109,
+                'title' => 'reportes_oajm_show',
+            ],
+            [
+                'id'    => 110,
+                'title' => 'reportes_oajm_delete',
+            ],
+            [
+                'id'    => 111,
+                'title' => 'reportes_oajm_access',
             ],
             [
                 'id'    => 112,
@@ -596,43 +596,43 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 147,
-                'title' => 'matricula_municipal_create',
-            ],
-            [
-                'id'    => 148,
-                'title' => 'matricula_municipal_edit',
-            ],
-            [
-                'id'    => 149,
-                'title' => 'matricula_municipal_show',
-            ],
-            [
-                'id'    => 150,
-                'title' => 'matricula_municipal_delete',
-            ],
-            [
-                'id'    => 151,
-                'title' => 'matricula_municipal_access',
-            ],
-            [
-                'id'    => 152,
                 'title' => 'institucione_create',
             ],
             [
-                'id'    => 153,
+                'id'    => 148,
                 'title' => 'institucione_edit',
             ],
             [
-                'id'    => 154,
+                'id'    => 149,
                 'title' => 'institucione_show',
             ],
             [
-                'id'    => 155,
+                'id'    => 150,
                 'title' => 'institucione_delete',
             ],
             [
-                'id'    => 156,
+                'id'    => 151,
                 'title' => 'institucione_access',
+            ],
+            [
+                'id'    => 152,
+                'title' => 'jornada_create',
+            ],
+            [
+                'id'    => 153,
+                'title' => 'jornada_edit',
+            ],
+            [
+                'id'    => 154,
+                'title' => 'jornada_show',
+            ],
+            [
+                'id'    => 155,
+                'title' => 'jornada_delete',
+            ],
+            [
+                'id'    => 156,
+                'title' => 'jornada_access',
             ],
             [
                 'id'    => 157,
@@ -656,23 +656,23 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 162,
-                'title' => 'jornada_create',
+                'title' => 'matricula_municipal_create',
             ],
             [
                 'id'    => 163,
-                'title' => 'jornada_edit',
+                'title' => 'matricula_municipal_edit',
             ],
             [
                 'id'    => 164,
-                'title' => 'jornada_show',
+                'title' => 'matricula_municipal_show',
             ],
             [
                 'id'    => 165,
-                'title' => 'jornada_delete',
+                'title' => 'matricula_municipal_delete',
             ],
             [
                 'id'    => 166,
-                'title' => 'jornada_access',
+                'title' => 'matricula_municipal_access',
             ],
             [
                 'id'    => 167,

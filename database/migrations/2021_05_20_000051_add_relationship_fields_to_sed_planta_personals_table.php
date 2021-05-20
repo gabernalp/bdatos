@@ -10,7 +10,7 @@ class AddRelationshipFieldsToSedPlantaPersonalsTable extends Migration
     {
         Schema::table('sed_planta_personals', function (Blueprint $table) {
             $table->unsignedBigInteger('comuna_id');
-            $table->foreign('comuna_id', 'comuna_fk_3948583')->references('id')->on('comunas');
+            $table->foreign('comuna_id', 'comuna_fk_3949578')->references('id')->on('comunas');
         });
     }
 }

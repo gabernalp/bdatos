@@ -19,7 +19,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('zona'))
-                    <span class="text-danger">{{ $errors->first('zona') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('zona') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.zona_helper') }}</span>
             </div>
@@ -31,7 +33,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('comuna'))
-                    <span class="text-danger">{{ $errors->first('comuna') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('comuna') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.comuna_helper') }}</span>
             </div>
@@ -43,7 +47,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('institucion'))
-                    <span class="text-danger">{{ $errors->first('institucion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('institucion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.institucion_helper') }}</span>
             </div>
@@ -55,7 +61,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('sede'))
-                    <span class="text-danger">{{ $errors->first('sede') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('sede') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.sede_helper') }}</span>
             </div>
@@ -63,7 +71,9 @@
                 <label for="grado">{{ trans('cruds.sedAlimentacion.fields.grado') }}</label>
                 <input class="form-control {{ $errors->has('grado') ? 'is-invalid' : '' }}" type="text" name="grado" id="grado" value="{{ old('grado', $sedAlimentacion->grado) }}">
                 @if($errors->has('grado'))
-                    <span class="text-danger">{{ $errors->first('grado') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('grado') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.grado_helper') }}</span>
             </div>
@@ -71,7 +81,9 @@
                 <label for="beneficiarios">{{ trans('cruds.sedAlimentacion.fields.beneficiarios') }}</label>
                 <input class="form-control {{ $errors->has('beneficiarios') ? 'is-invalid' : '' }}" type="number" name="beneficiarios" id="beneficiarios" value="{{ old('beneficiarios', $sedAlimentacion->beneficiarios) }}" step="1">
                 @if($errors->has('beneficiarios'))
-                    <span class="text-danger">{{ $errors->first('beneficiarios') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('beneficiarios') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedAlimentacion.fields.beneficiarios_helper') }}</span>
             </div>

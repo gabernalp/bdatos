@@ -13,7 +13,9 @@
                 <label for="sede_biblioteca">{{ trans('cruds.sedBiblioUsuario.fields.sede_biblioteca') }}</label>
                 <input class="form-control {{ $errors->has('sede_biblioteca') ? 'is-invalid' : '' }}" type="text" name="sede_biblioteca" id="sede_biblioteca" value="{{ old('sede_biblioteca', '') }}">
                 @if($errors->has('sede_biblioteca'))
-                    <span class="text-danger">{{ $errors->first('sede_biblioteca') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('sede_biblioteca') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.sede_biblioteca_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label for="motivo_visita">{{ trans('cruds.sedBiblioUsuario.fields.motivo_visita') }}</label>
                 <input class="form-control {{ $errors->has('motivo_visita') ? 'is-invalid' : '' }}" type="text" name="motivo_visita" id="motivo_visita" value="{{ old('motivo_visita', '') }}">
                 @if($errors->has('motivo_visita'))
-                    <span class="text-danger">{{ $errors->first('motivo_visita') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('motivo_visita') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.motivo_visita_helper') }}</span>
             </div>
@@ -29,7 +33,9 @@
                 <label for="grupo_etario">{{ trans('cruds.sedBiblioUsuario.fields.grupo_etario') }}</label>
                 <input class="form-control {{ $errors->has('grupo_etario') ? 'is-invalid' : '' }}" type="text" name="grupo_etario" id="grupo_etario" value="{{ old('grupo_etario', '') }}">
                 @if($errors->has('grupo_etario'))
-                    <span class="text-danger">{{ $errors->first('grupo_etario') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('grupo_etario') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.grupo_etario_helper') }}</span>
             </div>
@@ -37,7 +43,9 @@
                 <label for="genero">{{ trans('cruds.sedBiblioUsuario.fields.genero') }}</label>
                 <input class="form-control {{ $errors->has('genero') ? 'is-invalid' : '' }}" type="text" name="genero" id="genero" value="{{ old('genero', '') }}">
                 @if($errors->has('genero'))
-                    <span class="text-danger">{{ $errors->first('genero') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('genero') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.genero_helper') }}</span>
             </div>
@@ -45,7 +53,9 @@
                 <label for="tipo_poblacion">{{ trans('cruds.sedBiblioUsuario.fields.tipo_poblacion') }}</label>
                 <input class="form-control {{ $errors->has('tipo_poblacion') ? 'is-invalid' : '' }}" type="text" name="tipo_poblacion" id="tipo_poblacion" value="{{ old('tipo_poblacion', '') }}">
                 @if($errors->has('tipo_poblacion'))
-                    <span class="text-danger">{{ $errors->first('tipo_poblacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('tipo_poblacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.tipo_poblacion_helper') }}</span>
             </div>
@@ -53,7 +63,9 @@
                 <label for="fecha_visita">{{ trans('cruds.sedBiblioUsuario.fields.fecha_visita') }}</label>
                 <input class="form-control date {{ $errors->has('fecha_visita') ? 'is-invalid' : '' }}" type="text" name="fecha_visita" id="fecha_visita" value="{{ old('fecha_visita') }}">
                 @if($errors->has('fecha_visita'))
-                    <span class="text-danger">{{ $errors->first('fecha_visita') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_visita') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.fecha_visita_helper') }}</span>
             </div>
@@ -61,7 +73,9 @@
                 <label for="cantidad_asistentes">{{ trans('cruds.sedBiblioUsuario.fields.cantidad_asistentes') }}</label>
                 <input class="form-control {{ $errors->has('cantidad_asistentes') ? 'is-invalid' : '' }}" type="number" name="cantidad_asistentes" id="cantidad_asistentes" value="{{ old('cantidad_asistentes', '') }}" step="1">
                 @if($errors->has('cantidad_asistentes'))
-                    <span class="text-danger">{{ $errors->first('cantidad_asistentes') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('cantidad_asistentes') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedBiblioUsuario.fields.cantidad_asistentes_helper') }}</span>
             </div>

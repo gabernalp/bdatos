@@ -10,11 +10,11 @@ class AddRelationshipFieldsToSedAlimentacionsTable extends Migration
     {
         Schema::table('sed_alimentacions', function (Blueprint $table) {
             $table->unsignedBigInteger('comuna_id')->nullable();
-            $table->foreign('comuna_id', 'comuna_fk_3949201')->references('id')->on('comunas');
+            $table->foreign('comuna_id', 'comuna_fk_3949662')->references('id')->on('comunas');
             $table->unsignedBigInteger('institucion_id')->nullable();
-            $table->foreign('institucion_id', 'institucion_fk_3949202')->references('id')->on('instituciones');
+            $table->foreign('institucion_id', 'institucion_fk_3949663')->references('id')->on('instituciones');
             $table->unsignedBigInteger('sede_id')->nullable();
-            $table->foreign('sede_id', 'sede_fk_3949203')->references('id')->on('sedes');
+            $table->foreign('sede_id', 'sede_fk_3949664')->references('id')->on('sedes');
         });
     }
 }

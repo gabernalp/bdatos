@@ -19,7 +19,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('area'))
-                    <span class="text-danger">{{ $errors->first('area') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('area') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRecurso.fields.area_helper') }}</span>
             </div>
@@ -27,7 +29,9 @@
                 <label class="required" for="asignados">{{ trans('cruds.sedRecurso.fields.asignados') }}</label>
                 <input class="form-control {{ $errors->has('asignados') ? 'is-invalid' : '' }}" type="number" name="asignados" id="asignados" value="{{ old('asignados', $sedRecurso->asignados) }}" step="0.01" required>
                 @if($errors->has('asignados'))
-                    <span class="text-danger">{{ $errors->first('asignados') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('asignados') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRecurso.fields.asignados_helper') }}</span>
             </div>
@@ -35,7 +39,9 @@
                 <label class="required" for="ejecutados">{{ trans('cruds.sedRecurso.fields.ejecutados') }}</label>
                 <input class="form-control {{ $errors->has('ejecutados') ? 'is-invalid' : '' }}" type="number" name="ejecutados" id="ejecutados" value="{{ old('ejecutados', $sedRecurso->ejecutados) }}" step="0.01" required>
                 @if($errors->has('ejecutados'))
-                    <span class="text-danger">{{ $errors->first('ejecutados') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('ejecutados') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRecurso.fields.ejecutados_helper') }}</span>
             </div>
@@ -43,7 +49,9 @@
                 <label for="ejecucion">{{ trans('cruds.sedRecurso.fields.ejecucion') }}</label>
                 <input class="form-control {{ $errors->has('ejecucion') ? 'is-invalid' : '' }}" type="number" name="ejecucion" id="ejecucion" value="{{ old('ejecucion', $sedRecurso->ejecucion) }}" step="0.01">
                 @if($errors->has('ejecucion'))
-                    <span class="text-danger">{{ $errors->first('ejecucion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('ejecucion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRecurso.fields.ejecucion_helper') }}</span>
             </div>
@@ -51,7 +59,9 @@
                 <label class="required" for="vigencia">{{ trans('cruds.sedRecurso.fields.vigencia') }}</label>
                 <input class="form-control {{ $errors->has('vigencia') ? 'is-invalid' : '' }}" type="number" name="vigencia" id="vigencia" value="{{ old('vigencia', $sedRecurso->vigencia) }}" step="1" required>
                 @if($errors->has('vigencia'))
-                    <span class="text-danger">{{ $errors->first('vigencia') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('vigencia') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRecurso.fields.vigencia_helper') }}</span>
             </div>

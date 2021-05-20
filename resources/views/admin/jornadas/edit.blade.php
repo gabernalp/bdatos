@@ -14,7 +14,9 @@
                 <label for="nombre">{{ trans('cruds.jornada.fields.nombre') }}</label>
                 <input class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}" type="text" name="nombre" id="nombre" value="{{ old('nombre', $jornada->nombre) }}">
                 @if($errors->has('nombre'))
-                    <span class="text-danger">{{ $errors->first('nombre') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.jornada.fields.nombre_helper') }}</span>
             </div>
