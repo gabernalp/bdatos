@@ -13,7 +13,9 @@
                 <label class="required" for="dane">{{ trans('cruds.sedCalificacionDocente.fields.dane') }}</label>
                 <input class="form-control {{ $errors->has('dane') ? 'is-invalid' : '' }}" type="text" name="dane" id="dane" value="{{ old('dane', '') }}" required>
                 @if($errors->has('dane'))
-                    <span class="text-danger">{{ $errors->first('dane') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('dane') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.dane_helper') }}</span>
             </div>
@@ -25,7 +27,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('institucion'))
-                    <span class="text-danger">{{ $errors->first('institucion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('institucion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.institucion_helper') }}</span>
             </div>
@@ -37,7 +41,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('sede'))
-                    <span class="text-danger">{{ $errors->first('sede') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('sede') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.sede_helper') }}</span>
             </div>
@@ -50,7 +56,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('zona'))
-                    <span class="text-danger">{{ $errors->first('zona') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('zona') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.zona_helper') }}</span>
             </div>
@@ -62,7 +70,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('comuna'))
-                    <span class="text-danger">{{ $errors->first('comuna') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('comuna') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.comuna_helper') }}</span>
             </div>
@@ -70,7 +80,9 @@
                 <label class="required" for="cargo">{{ trans('cruds.sedCalificacionDocente.fields.cargo') }}</label>
                 <input class="form-control {{ $errors->has('cargo') ? 'is-invalid' : '' }}" type="text" name="cargo" id="cargo" value="{{ old('cargo', '') }}" required>
                 @if($errors->has('cargo'))
-                    <span class="text-danger">{{ $errors->first('cargo') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('cargo') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.cargo_helper') }}</span>
             </div>
@@ -78,7 +90,9 @@
                 <label class="required" for="area">{{ trans('cruds.sedCalificacionDocente.fields.area') }}</label>
                 <input class="form-control {{ $errors->has('area') ? 'is-invalid' : '' }}" type="text" name="area" id="area" value="{{ old('area', '') }}" required>
                 @if($errors->has('area'))
-                    <span class="text-danger">{{ $errors->first('area') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('area') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.area_helper') }}</span>
             </div>
@@ -86,7 +100,9 @@
                 <label class="required" for="calificacion">{{ trans('cruds.sedCalificacionDocente.fields.calificacion') }}</label>
                 <input class="form-control {{ $errors->has('calificacion') ? 'is-invalid' : '' }}" type="number" name="calificacion" id="calificacion" value="{{ old('calificacion', '') }}" step="0.01" required>
                 @if($errors->has('calificacion'))
-                    <span class="text-danger">{{ $errors->first('calificacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('calificacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.calificacion_helper') }}</span>
             </div>
@@ -94,7 +110,9 @@
                 <label class="required" for="valoracion">{{ trans('cruds.sedCalificacionDocente.fields.valoracion') }}</label>
                 <input class="form-control {{ $errors->has('valoracion') ? 'is-invalid' : '' }}" type="text" name="valoracion" id="valoracion" value="{{ old('valoracion', '') }}" required>
                 @if($errors->has('valoracion'))
-                    <span class="text-danger">{{ $errors->first('valoracion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('valoracion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.valoracion_helper') }}</span>
             </div>
@@ -102,7 +120,9 @@
                 <label class="required" for="vigencia">{{ trans('cruds.sedCalificacionDocente.fields.vigencia') }}</label>
                 <input class="form-control {{ $errors->has('vigencia') ? 'is-invalid' : '' }}" type="number" name="vigencia" id="vigencia" value="{{ old('vigencia', '') }}" step="1" required>
                 @if($errors->has('vigencia'))
-                    <span class="text-danger">{{ $errors->first('vigencia') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('vigencia') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedCalificacionDocente.fields.vigencia_helper') }}</span>
             </div>

@@ -6,6 +6,10 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class MunicipiosTest extends DuskTestCase
 {
     public function testIndex()

@@ -29,6 +29,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Audit Logs
     Route::resource('audit-logs', 'AuditLogsController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
+    // User Alerts
+    Route::delete('user-alerts/destroy', 'UserAlertsController@massDestroy')->name('user-alerts.massDestroy');
+    Route::get('user-alerts/read', 'UserAlertsController@read');
+    Route::resource('user-alerts', 'UserAlertsController', ['except' => ['edit', 'update']]);
+
     // Departamentos
     Route::delete('departamentos/destroy', 'DepartamentosController@massDestroy')->name('departamentos.massDestroy');
     Route::resource('departamentos', 'DepartamentosController');
@@ -91,11 +96,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('reportes-oajms/destroy', 'ReportesOajmController@massDestroy')->name('reportes-oajms.massDestroy');
     Route::resource('reportes-oajms', 'ReportesOajmController');
 
-    // User Alerts
-    Route::delete('user-alerts/destroy', 'UserAlertsController@massDestroy')->name('user-alerts.massDestroy');
-    Route::get('user-alerts/read', 'UserAlertsController@read');
-    Route::resource('user-alerts', 'UserAlertsController', ['except' => ['edit', 'update']]);
-
     // Sed Repitencia
     Route::delete('sed-repitencia/destroy', 'SedRepitenciaController@massDestroy')->name('sed-repitencia.massDestroy');
     Route::resource('sed-repitencia', 'SedRepitenciaController');
@@ -132,17 +132,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('sed-participacion-artista/process-csv-import', 'SedParticipacionArtistasController@processCsvImport')->name('sed-participacion-artista.processCsvImport');
     Route::resource('sed-participacion-artista', 'SedParticipacionArtistasController');
 
-    // Matricula Municipal
-    Route::delete('matricula-municipals/destroy', 'MatriculaMunicipalController@massDestroy')->name('matricula-municipals.massDestroy');
-    Route::post('matricula-municipals/parse-csv-import', 'MatriculaMunicipalController@parseCsvImport')->name('matricula-municipals.parseCsvImport');
-    Route::post('matricula-municipals/process-csv-import', 'MatriculaMunicipalController@processCsvImport')->name('matricula-municipals.processCsvImport');
-    Route::resource('matricula-municipals', 'MatriculaMunicipalController');
-
     // Instituciones
     Route::delete('instituciones/destroy', 'InstitucionesController@massDestroy')->name('instituciones.massDestroy');
     Route::post('instituciones/parse-csv-import', 'InstitucionesController@parseCsvImport')->name('instituciones.parseCsvImport');
     Route::post('instituciones/process-csv-import', 'InstitucionesController@processCsvImport')->name('instituciones.processCsvImport');
     Route::resource('instituciones', 'InstitucionesController');
+
+    // Jornadas
+    Route::delete('jornadas/destroy', 'JornadasController@massDestroy')->name('jornadas.massDestroy');
+    Route::resource('jornadas', 'JornadasController');
 
     // Sede
     Route::delete('sedes/destroy', 'SedeController@massDestroy')->name('sedes.massDestroy');
@@ -150,9 +148,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('sedes/process-csv-import', 'SedeController@processCsvImport')->name('sedes.processCsvImport');
     Route::resource('sedes', 'SedeController');
 
-    // Jornadas
-    Route::delete('jornadas/destroy', 'JornadasController@massDestroy')->name('jornadas.massDestroy');
-    Route::resource('jornadas', 'JornadasController');
+    // Matricula Municipal
+    Route::delete('matricula-municipals/destroy', 'MatriculaMunicipalController@massDestroy')->name('matricula-municipals.massDestroy');
+    Route::post('matricula-municipals/parse-csv-import', 'MatriculaMunicipalController@parseCsvImport')->name('matricula-municipals.parseCsvImport');
+    Route::post('matricula-municipals/process-csv-import', 'MatriculaMunicipalController@processCsvImport')->name('matricula-municipals.processCsvImport');
+    Route::resource('matricula-municipals', 'MatriculaMunicipalController');
 
     // Sed Calificacion Docente
     Route::delete('sed-calificacion-docentes/destroy', 'SedCalificacionDocenteController@massDestroy')->name('sed-calificacion-docentes.massDestroy');

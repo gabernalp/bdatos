@@ -2,38 +2,25 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\ReportesSgen;
 use Gate;
+use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
-class MassDestroyReportesSgenRequest extends FormRequest  {
-
-
-
-
-
-public function authorize()
+class MassDestroyReportesSgenRequest extends FormRequest
 {
-    abort_if(Gate::denies('reportes_sgen_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+    public function authorize()
+    {
+        abort_if(Gate::denies('reportes_sgen_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        return true;
+    }
 
-
-
-return true;
-    
-}
-public function rules()
-{
-    
-
-
-
-return [
-'ids' => 'required|array',
-    'ids.*' => 'exists:reportes_sgens,id',
-]
-    
-}
-
+    public function rules()
+    {
+        return [
+            'ids'   => 'required|array',
+            'ids.*' => 'exists:reportes_sgens,id',
+        ];
+    }
 }

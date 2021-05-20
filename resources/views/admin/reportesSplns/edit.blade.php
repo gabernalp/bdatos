@@ -14,7 +14,9 @@
                 <label class="required" for="nombre">{{ trans('cruds.reportesSpln.fields.nombre') }}</label>
                 <input class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}" type="text" name="nombre" id="nombre" value="{{ old('nombre', $reportesSpln->nombre) }}" required>
                 @if($errors->has('nombre'))
-                    <span class="text-danger">{{ $errors->first('nombre') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.reportesSpln.fields.nombre_helper') }}</span>
             </div>
@@ -22,7 +24,9 @@
                 <label for="fecha">{{ trans('cruds.reportesSpln.fields.fecha') }}</label>
                 <input class="form-control date {{ $errors->has('fecha') ? 'is-invalid' : '' }}" type="text" name="fecha" id="fecha" value="{{ old('fecha', $reportesSpln->fecha) }}">
                 @if($errors->has('fecha'))
-                    <span class="text-danger">{{ $errors->first('fecha') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.reportesSpln.fields.fecha_helper') }}</span>
             </div>
@@ -34,7 +38,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('usuario'))
-                    <span class="text-danger">{{ $errors->first('usuario') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('usuario') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.reportesSpln.fields.usuario_helper') }}</span>
             </div>
@@ -42,7 +48,9 @@
                 <label for="observaciones">{{ trans('cruds.reportesSpln.fields.observaciones') }}</label>
                 <textarea class="form-control {{ $errors->has('observaciones') ? 'is-invalid' : '' }}" name="observaciones" id="observaciones">{{ old('observaciones', $reportesSpln->observaciones) }}</textarea>
                 @if($errors->has('observaciones'))
-                    <span class="text-danger">{{ $errors->first('observaciones') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('observaciones') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.reportesSpln.fields.observaciones_helper') }}</span>
             </div>

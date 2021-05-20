@@ -14,7 +14,9 @@
                 <label class="required" for="matricula_aplicable">{{ trans('cruds.sedDesercion.fields.matricula_aplicable') }}</label>
                 <input class="form-control {{ $errors->has('matricula_aplicable') ? 'is-invalid' : '' }}" type="number" name="matricula_aplicable" id="matricula_aplicable" value="{{ old('matricula_aplicable', $sedDesercion->matricula_aplicable) }}" step="1" required>
                 @if($errors->has('matricula_aplicable'))
-                    <span class="text-danger">{{ $errors->first('matricula_aplicable') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('matricula_aplicable') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedDesercion.fields.matricula_aplicable_helper') }}</span>
             </div>
@@ -22,7 +24,9 @@
                 <label class="required" for="retiros">{{ trans('cruds.sedDesercion.fields.retiros') }}</label>
                 <input class="form-control {{ $errors->has('retiros') ? 'is-invalid' : '' }}" type="number" name="retiros" id="retiros" value="{{ old('retiros', $sedDesercion->retiros) }}" step="1" required>
                 @if($errors->has('retiros'))
-                    <span class="text-danger">{{ $errors->first('retiros') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('retiros') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedDesercion.fields.retiros_helper') }}</span>
             </div>
@@ -30,7 +34,9 @@
                 <label class="required" for="desercion">{{ trans('cruds.sedDesercion.fields.desercion') }}</label>
                 <input class="form-control {{ $errors->has('desercion') ? 'is-invalid' : '' }}" type="number" name="desercion" id="desercion" value="{{ old('desercion', $sedDesercion->desercion) }}" step="0.01" required>
                 @if($errors->has('desercion'))
-                    <span class="text-danger">{{ $errors->first('desercion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('desercion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedDesercion.fields.desercion_helper') }}</span>
             </div>
@@ -38,7 +44,9 @@
                 <label class="required" for="fecha_corte">{{ trans('cruds.sedDesercion.fields.fecha_corte') }}</label>
                 <input class="form-control {{ $errors->has('fecha_corte') ? 'is-invalid' : '' }}" type="text" name="fecha_corte" id="fecha_corte" value="{{ old('fecha_corte', $sedDesercion->fecha_corte) }}" required>
                 @if($errors->has('fecha_corte'))
-                    <span class="text-danger">{{ $errors->first('fecha_corte') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_corte') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedDesercion.fields.fecha_corte_helper') }}</span>
             </div>

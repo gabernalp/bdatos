@@ -13,7 +13,9 @@
                 <label class="required" for="nombre_artista">{{ trans('cruds.sedParticipacionArtistum.fields.nombre_artista') }}</label>
                 <input class="form-control {{ $errors->has('nombre_artista') ? 'is-invalid' : '' }}" type="text" name="nombre_artista" id="nombre_artista" value="{{ old('nombre_artista', '') }}" required>
                 @if($errors->has('nombre_artista'))
-                    <span class="text-danger">{{ $errors->first('nombre_artista') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre_artista') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedParticipacionArtistum.fields.nombre_artista_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label class="required" for="nombre_festival">{{ trans('cruds.sedParticipacionArtistum.fields.nombre_festival') }}</label>
                 <input class="form-control {{ $errors->has('nombre_festival') ? 'is-invalid' : '' }}" type="text" name="nombre_festival" id="nombre_festival" value="{{ old('nombre_festival', '') }}" required>
                 @if($errors->has('nombre_festival'))
-                    <span class="text-danger">{{ $errors->first('nombre_festival') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre_festival') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedParticipacionArtistum.fields.nombre_festival_helper') }}</span>
             </div>
@@ -29,7 +33,9 @@
                 <label for="fecha_inicial">{{ trans('cruds.sedParticipacionArtistum.fields.fecha_inicial') }}</label>
                 <input class="form-control date {{ $errors->has('fecha_inicial') ? 'is-invalid' : '' }}" type="text" name="fecha_inicial" id="fecha_inicial" value="{{ old('fecha_inicial') }}">
                 @if($errors->has('fecha_inicial'))
-                    <span class="text-danger">{{ $errors->first('fecha_inicial') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_inicial') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedParticipacionArtistum.fields.fecha_inicial_helper') }}</span>
             </div>
@@ -37,7 +43,9 @@
                 <label for="fecha_final">{{ trans('cruds.sedParticipacionArtistum.fields.fecha_final') }}</label>
                 <input class="form-control date {{ $errors->has('fecha_final') ? 'is-invalid' : '' }}" type="text" name="fecha_final" id="fecha_final" value="{{ old('fecha_final') }}">
                 @if($errors->has('fecha_final'))
-                    <span class="text-danger">{{ $errors->first('fecha_final') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_final') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedParticipacionArtistum.fields.fecha_final_helper') }}</span>
             </div>

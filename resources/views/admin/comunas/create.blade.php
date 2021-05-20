@@ -13,7 +13,9 @@
                 <label for="nombre">{{ trans('cruds.comuna.fields.nombre') }}</label>
                 <input class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}" type="text" name="nombre" id="nombre" value="{{ old('nombre', '') }}">
                 @if($errors->has('nombre'))
-                    <span class="text-danger">{{ $errors->first('nombre') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.comuna.fields.nombre_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label for="codigo">{{ trans('cruds.comuna.fields.codigo') }}</label>
                 <input class="form-control {{ $errors->has('codigo') ? 'is-invalid' : '' }}" type="text" name="codigo" id="codigo" value="{{ old('codigo', '') }}">
                 @if($errors->has('codigo'))
-                    <span class="text-danger">{{ $errors->first('codigo') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('codigo') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.comuna.fields.codigo_helper') }}</span>
             </div>
@@ -29,7 +33,9 @@
                 <label for="mapa">{{ trans('cruds.comuna.fields.mapa') }}</label>
                 <textarea class="form-control ckeditor {{ $errors->has('mapa') ? 'is-invalid' : '' }}" name="mapa" id="mapa">{!! old('mapa') !!}</textarea>
                 @if($errors->has('mapa'))
-                    <span class="text-danger">{{ $errors->first('mapa') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('mapa') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.comuna.fields.mapa_helper') }}</span>
             </div>
@@ -37,7 +43,9 @@
                 <label for="observaciones">{{ trans('cruds.comuna.fields.observaciones') }}</label>
                 <textarea class="form-control {{ $errors->has('observaciones') ? 'is-invalid' : '' }}" name="observaciones" id="observaciones">{{ old('observaciones') }}</textarea>
                 @if($errors->has('observaciones'))
-                    <span class="text-danger">{{ $errors->first('observaciones') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('observaciones') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.comuna.fields.observaciones_helper') }}</span>
             </div>

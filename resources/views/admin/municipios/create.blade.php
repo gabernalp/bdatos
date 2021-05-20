@@ -13,7 +13,9 @@
                 <label class="required" for="name">{{ trans('cruds.municipio.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
                 @if($errors->has('name'))
-                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('name') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.municipio.fields.name_helper') }}</span>
             </div>
@@ -21,7 +23,9 @@
                 <label class="required" for="code">{{ trans('cruds.municipio.fields.code') }}</label>
                 <input class="form-control {{ $errors->has('code') ? 'is-invalid' : '' }}" type="text" name="code" id="code" value="{{ old('code', '') }}" required>
                 @if($errors->has('code'))
-                    <span class="text-danger">{{ $errors->first('code') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('code') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.municipio.fields.code_helper') }}</span>
             </div>
@@ -33,7 +37,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('departamento'))
-                    <span class="text-danger">{{ $errors->first('departamento') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('departamento') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.municipio.fields.departamento_helper') }}</span>
             </div>

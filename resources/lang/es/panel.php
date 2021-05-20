@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Banco de Datos',
+    'site_title' => 'clone of Banco de Datos',
 ];

@@ -10,7 +10,7 @@ class AddRelationshipFieldsToReportesSedusTable extends Migration
     {
         Schema::table('reportes_sedus', function (Blueprint $table) {
             $table->unsignedBigInteger('created_by_id')->nullable();
-            $table->foreign('created_by_id', 'created_by_fk_3948242')->references('id')->on('users');
+            $table->foreign('created_by_id', 'created_by_fk_3949489')->references('id')->on('users');
         });
     }
 }

@@ -10,7 +10,7 @@ class AddRelationshipFieldsToReportesSgobsTable extends Migration
     {
         Schema::table('reportes_sgobs', function (Blueprint $table) {
             $table->unsignedBigInteger('usuario_id')->nullable();
-            $table->foreign('usuario_id', 'usuario_fk_3771969')->references('id')->on('users');
+            $table->foreign('usuario_id', 'usuario_fk_3949445')->references('id')->on('users');
         });
     }
 }

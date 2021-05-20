@@ -17,11 +17,11 @@ class UpdateMunicipioRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'            => [
+            'name' => [
                 'string',
                 'required',
             ],
-            'code'            => [
+            'code' => [
                 'string',
                 'required',
             ],

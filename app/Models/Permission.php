@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use \DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
 
 class Permission extends Model
 {
-    use SoftDeletes, HasFactory;
+    use SoftDeletes;
+    use HasFactory;
 
     public $table = 'permissions';
 

@@ -20,35 +20,35 @@ class MunicipiosController extends Controller
         abort_if(Gate::denies('municipio_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         if ($request->ajax()) {
-            $query = Municipio::with(['departamento'])->select(sprintf('%s.*', (new Municipio)->table));
+            $query = Municipio::with(['departamento'])->select(sprintf('%s.*', (new Municipio())->table));
             $table = Datatables::of($query);
 
             $table->addColumn('placeholder', '&nbsp;');
             $table->addColumn('actions', '&nbsp;');
 
             $table->editColumn('actions', function ($row) {
-                $viewGate      = 'municipio_show';
-                $editGate      = 'municipio_edit';
-                $deleteGate    = 'municipio_delete';
+                $viewGate = 'municipio_show';
+                $editGate = 'municipio_edit';
+                $deleteGate = 'municipio_delete';
                 $crudRoutePart = 'municipios';
 
                 return view('partials.datatablesActions', compact(
-                    'viewGate',
-                    'editGate',
-                    'deleteGate',
-                    'crudRoutePart',
-                    'row'
-                ));
+                'viewGate',
+                'editGate',
+                'deleteGate',
+                'crudRoutePart',
+                'row'
+            ));
             });
 
             $table->editColumn('id', function ($row) {
-                return $row->id ? $row->id : "";
+                return $row->id ? $row->id : '';
             });
             $table->editColumn('name', function ($row) {
-                return $row->name ? $row->name : "";
+                return $row->name ? $row->name : '';
             });
             $table->editColumn('code', function ($row) {
-                return $row->code ? $row->code : "";
+                return $row->code ? $row->code : '';
             });
             $table->addColumn('departamento_name', function ($row) {
                 return $row->departamento ? $row->departamento->name : '';

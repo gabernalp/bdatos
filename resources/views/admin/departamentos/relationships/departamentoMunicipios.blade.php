@@ -1,92 +1,92 @@
-<div class="m-3">
-    @can('municipio_create')
-        <div style="margin-bottom: 10px;" class="row">
-            <div class="col-lg-12">
-                <a class="btn btn-success" href="{{ route('admin.municipios.create') }}">
-                    {{ trans('global.add') }} {{ trans('cruds.municipio.title_singular') }}
-                </a>
-            </div>
+@can('municipio_create')
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-success" href="{{ route('admin.municipios.create') }}">
+                {{ trans('global.add') }} {{ trans('cruds.municipio.title_singular') }}
+            </a>
         </div>
-    @endcan
-    <div class="card">
-        <div class="card-header">
-            {{ trans('cruds.municipio.title_singular') }} {{ trans('global.list') }}
-        </div>
+    </div>
+@endcan
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class=" table table-bordered table-striped table-hover datatable datatable-departamentoMunicipios">
-                    <thead>
-                        <tr>
-                            <th width="10">
+<div class="card">
+    <div class="card-header">
+        {{ trans('cruds.municipio.title_singular') }} {{ trans('global.list') }}
+    </div>
 
-                            </th>
-                            <th>
-                                {{ trans('cruds.municipio.fields.id') }}
-                            </th>
-                            <th>
-                                {{ trans('cruds.municipio.fields.name') }}
-                            </th>
-                            <th>
-                                {{ trans('cruds.municipio.fields.code') }}
-                            </th>
-                            <th>
-                                {{ trans('cruds.municipio.fields.departamento') }}
-                            </th>
-                            <th>
-                                &nbsp;
-                            </th>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class=" table table-bordered table-striped table-hover datatable datatable-departamentoMunicipios">
+                <thead>
+                    <tr>
+                        <th width="10">
+
+                        </th>
+                        <th>
+                            {{ trans('cruds.municipio.fields.id') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.municipio.fields.name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.municipio.fields.code') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.municipio.fields.departamento') }}
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($municipios as $key => $municipio)
+                        <tr data-entry-id="{{ $municipio->id }}">
+                            <td>
+
+                            </td>
+                            <td>
+                                {{ $municipio->id ?? '' }}
+                            </td>
+                            <td>
+                                {{ $municipio->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $municipio->code ?? '' }}
+                            </td>
+                            <td>
+                                {{ $municipio->departamento->name ?? '' }}
+                            </td>
+                            <td>
+                                @can('municipio_show')
+                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.municipios.show', $municipio->id) }}">
+                                        {{ trans('global.view') }}
+                                    </a>
+                                @endcan
+
+                                @can('municipio_edit')
+                                    <a class="btn btn-xs btn-info" href="{{ route('admin.municipios.edit', $municipio->id) }}">
+                                        {{ trans('global.edit') }}
+                                    </a>
+                                @endcan
+
+                                @can('municipio_delete')
+                                    <form action="{{ route('admin.municipios.destroy', $municipio->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                    </form>
+                                @endcan
+
+                            </td>
+
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($municipios as $key => $municipio)
-                            <tr data-entry-id="{{ $municipio->id }}">
-                                <td>
-
-                                </td>
-                                <td>
-                                    {{ $municipio->id ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $municipio->name ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $municipio->code ?? '' }}
-                                </td>
-                                <td>
-                                    {{ $municipio->departamento->name ?? '' }}
-                                </td>
-                                <td>
-                                    @can('municipio_show')
-                                        <a class="btn btn-xs btn-primary" href="{{ route('admin.municipios.show', $municipio->id) }}">
-                                            {{ trans('global.view') }}
-                                        </a>
-                                    @endcan
-
-                                    @can('municipio_edit')
-                                        <a class="btn btn-xs btn-info" href="{{ route('admin.municipios.edit', $municipio->id) }}">
-                                            {{ trans('global.edit') }}
-                                        </a>
-                                    @endcan
-
-                                    @can('municipio_delete')
-                                        <form action="{{ route('admin.municipios.destroy', $municipio->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                            <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
-                                        </form>
-                                    @endcan
-
-                                </td>
-
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
 @section('scripts')
 @parent
 <script>
@@ -132,6 +132,9 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
+  $('div#sidebar').on('transitionend', function(e) {
+    $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+  })
   
 })
 

@@ -10,7 +10,7 @@ class AddRelationshipFieldsToInstitucionesTable extends Migration
     {
         Schema::table('instituciones', function (Blueprint $table) {
             $table->unsignedBigInteger('comuna_id')->nullable();
-            $table->foreign('comuna_id', 'comuna_fk_3948744')->references('id')->on('comunas');
+            $table->foreign('comuna_id', 'comuna_fk_3949597')->references('id')->on('comunas');
         });
     }
 }

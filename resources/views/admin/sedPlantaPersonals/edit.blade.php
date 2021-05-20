@@ -14,7 +14,9 @@
                 <label class="required" for="establecimiento_datos">{{ trans('cruds.sedPlantaPersonal.fields.establecimiento_datos') }}</label>
                 <input class="form-control {{ $errors->has('establecimiento_datos') ? 'is-invalid' : '' }}" type="text" name="establecimiento_datos" id="establecimiento_datos" value="{{ old('establecimiento_datos', $sedPlantaPersonal->establecimiento_datos) }}" required>
                 @if($errors->has('establecimiento_datos'))
-                    <span class="text-danger">{{ $errors->first('establecimiento_datos') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('establecimiento_datos') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.establecimiento_datos_helper') }}</span>
             </div>
@@ -22,7 +24,9 @@
                 <label class="required" for="dane">{{ trans('cruds.sedPlantaPersonal.fields.dane') }}</label>
                 <input class="form-control {{ $errors->has('dane') ? 'is-invalid' : '' }}" type="text" name="dane" id="dane" value="{{ old('dane', $sedPlantaPersonal->dane) }}" required>
                 @if($errors->has('dane'))
-                    <span class="text-danger">{{ $errors->first('dane') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('dane') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.dane_helper') }}</span>
             </div>
@@ -34,7 +38,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('comuna'))
-                    <span class="text-danger">{{ $errors->first('comuna') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('comuna') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.comuna_helper') }}</span>
             </div>
@@ -42,7 +48,9 @@
                 <label class="required" for="area_formacion">{{ trans('cruds.sedPlantaPersonal.fields.area_formacion') }}</label>
                 <input class="form-control {{ $errors->has('area_formacion') ? 'is-invalid' : '' }}" type="text" name="area_formacion" id="area_formacion" value="{{ old('area_formacion', $sedPlantaPersonal->area_formacion) }}" required>
                 @if($errors->has('area_formacion'))
-                    <span class="text-danger">{{ $errors->first('area_formacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('area_formacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.area_formacion_helper') }}</span>
             </div>
@@ -50,7 +58,9 @@
                 <label class="required" for="nivel_educativo">{{ trans('cruds.sedPlantaPersonal.fields.nivel_educativo') }}</label>
                 <input class="form-control {{ $errors->has('nivel_educativo') ? 'is-invalid' : '' }}" type="text" name="nivel_educativo" id="nivel_educativo" value="{{ old('nivel_educativo', $sedPlantaPersonal->nivel_educativo) }}" required>
                 @if($errors->has('nivel_educativo'))
-                    <span class="text-danger">{{ $errors->first('nivel_educativo') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nivel_educativo') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.nivel_educativo_helper') }}</span>
             </div>
@@ -58,7 +68,9 @@
                 <label class="required" for="area_dicta">{{ trans('cruds.sedPlantaPersonal.fields.area_dicta') }}</label>
                 <input class="form-control {{ $errors->has('area_dicta') ? 'is-invalid' : '' }}" type="text" name="area_dicta" id="area_dicta" value="{{ old('area_dicta', $sedPlantaPersonal->area_dicta) }}" required>
                 @if($errors->has('area_dicta'))
-                    <span class="text-danger">{{ $errors->first('area_dicta') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('area_dicta') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.area_dicta_helper') }}</span>
             </div>
@@ -66,7 +78,9 @@
                 <label class="required" for="vigencia">{{ trans('cruds.sedPlantaPersonal.fields.vigencia') }}</label>
                 <input class="form-control {{ $errors->has('vigencia') ? 'is-invalid' : '' }}" type="number" name="vigencia" id="vigencia" value="{{ old('vigencia', $sedPlantaPersonal->vigencia) }}" step="1" required>
                 @if($errors->has('vigencia'))
-                    <span class="text-danger">{{ $errors->first('vigencia') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('vigencia') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedPlantaPersonal.fields.vigencia_helper') }}</span>
             </div>

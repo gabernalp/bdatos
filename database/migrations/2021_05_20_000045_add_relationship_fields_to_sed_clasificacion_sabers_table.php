@@ -10,7 +10,7 @@ class AddRelationshipFieldsToSedClasificacionSabersTable extends Migration
     {
         Schema::table('sed_clasificacion_sabers', function (Blueprint $table) {
             $table->unsignedBigInteger('comuna_id');
-            $table->foreign('comuna_id', 'comuna_fk_3949213')->references('id')->on('comunas');
+            $table->foreign('comuna_id', 'comuna_fk_3949674')->references('id')->on('comunas');
         });
     }
 }

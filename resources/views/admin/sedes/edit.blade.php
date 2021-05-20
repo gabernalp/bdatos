@@ -18,7 +18,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('institucion'))
-                    <span class="text-danger">{{ $errors->first('institucion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('institucion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sede.fields.institucion_helper') }}</span>
             </div>
@@ -26,7 +28,9 @@
                 <label class="required" for="nombre">{{ trans('cruds.sede.fields.nombre') }}</label>
                 <input class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}" type="text" name="nombre" id="nombre" value="{{ old('nombre', $sede->nombre) }}" required>
                 @if($errors->has('nombre'))
-                    <span class="text-danger">{{ $errors->first('nombre') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('nombre') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sede.fields.nombre_helper') }}</span>
             </div>
@@ -42,7 +46,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('jornadas'))
-                    <span class="text-danger">{{ $errors->first('jornadas') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('jornadas') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sede.fields.jornadas_helper') }}</span>
             </div>

@@ -14,7 +14,9 @@
                 <label class="required" for="poblacion">{{ trans('cruds.sedRepitencium.fields.poblacion') }}</label>
                 <input class="form-control {{ $errors->has('poblacion') ? 'is-invalid' : '' }}" type="number" name="poblacion" id="poblacion" value="{{ old('poblacion', $sedRepitencium->poblacion) }}" step="1" required>
                 @if($errors->has('poblacion'))
-                    <span class="text-danger">{{ $errors->first('poblacion') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('poblacion') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRepitencium.fields.poblacion_helper') }}</span>
             </div>
@@ -22,7 +24,9 @@
                 <label class="required" for="matricula">{{ trans('cruds.sedRepitencium.fields.matricula') }}</label>
                 <input class="form-control {{ $errors->has('matricula') ? 'is-invalid' : '' }}" type="number" name="matricula" id="matricula" value="{{ old('matricula', $sedRepitencium->matricula) }}" step="1" required>
                 @if($errors->has('matricula'))
-                    <span class="text-danger">{{ $errors->first('matricula') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('matricula') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRepitencium.fields.matricula_helper') }}</span>
             </div>
@@ -30,7 +34,9 @@
                 <label class="required" for="repitencia">{{ trans('cruds.sedRepitencium.fields.repitencia') }}</label>
                 <input class="form-control {{ $errors->has('repitencia') ? 'is-invalid' : '' }}" type="number" name="repitencia" id="repitencia" value="{{ old('repitencia', $sedRepitencium->repitencia) }}" step="0.01" required>
                 @if($errors->has('repitencia'))
-                    <span class="text-danger">{{ $errors->first('repitencia') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('repitencia') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRepitencium.fields.repitencia_helper') }}</span>
             </div>
@@ -38,7 +44,9 @@
                 <label class="required" for="fecha_corte">{{ trans('cruds.sedRepitencium.fields.fecha_corte') }}</label>
                 <input class="form-control date {{ $errors->has('fecha_corte') ? 'is-invalid' : '' }}" type="text" name="fecha_corte" id="fecha_corte" value="{{ old('fecha_corte', $sedRepitencium->fecha_corte) }}" required>
                 @if($errors->has('fecha_corte'))
-                    <span class="text-danger">{{ $errors->first('fecha_corte') }}</span>
+                    <div class="invalid-feedback">
+                        {{ $errors->first('fecha_corte') }}
+                    </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.sedRepitencium.fields.fecha_corte_helper') }}</span>
             </div>
